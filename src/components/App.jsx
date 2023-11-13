@@ -44,7 +44,7 @@ export class App extends Component {
           <FeedbackOptions
             options={Object.keys(states)}
             onLeaveFeedback={this.onLeaveFeedback}
-          ></FeedbackOptions>
+          />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() ? (
@@ -54,9 +54,9 @@ export class App extends Component {
               bad={states.bad}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
-            ></Statistics>
+            />
           ) : (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message="There is no feedback" />
           )}
         </Section>
       </>
